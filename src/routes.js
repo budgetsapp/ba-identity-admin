@@ -1,6 +1,6 @@
-const Signin = { template: "<div>Signin</div>" };
-const Signup = { template: "<div>Signup</div>" };
-const Dashboard = { template: "<div>Dashboard</div>" };
+// const Signin = { template: "<div>Signin</div>" };
+export const Signup = { template: `<div>Signup</div>` };
+// const Dashboard = { template: "<div>Dashboard</div>" };
 const UsersWrapper = {
   template: `
     <div>
@@ -34,10 +34,14 @@ const UserUpdate = {
 const Roles = { template: "<div>Roles</div>" };
 // const RoleCreate = { template: "<div>RoleCreate</div>" };
 // const RoleUpdate = { template: "<div>RoleUpdate</div>" };
+const NotFound = { template: "<div>NotFound</div>" };
+
+import Home from "./components/Home.vue";
+import SigninComp from "./components/Signin.vue";
 
 const routes = [
-  { path: "/", component: Dashboard },
-  { path: "/signin", component: Signin },
+  { path: "/", component: Home },
+  { path: "/signin", component: SigninComp },
   { path: "/signup", component: Signup },
 
   {
@@ -50,7 +54,8 @@ const routes = [
     ]
   },
 
-  { path: "/roles", component: Roles }
+  { path: "/roles", component: Roles },
+  { path: "*", component: NotFound }
   // { path: "/roles/new", component: RoleCreate },
   // { path: "/roles/:id", component: RoleUpdate }
 ];

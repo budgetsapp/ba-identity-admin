@@ -1,23 +1,14 @@
 <template>
   <div id="app">
-    <span>ba-identity-admin</span>
-    <router-view></router-view>
+    <nav>
+      <sign-up></sign-up>
+      <router-link to="/signin">Signin</router-link>
+      <router-link to="/signup">Signup</router-link>
+    </nav>
+    <router-view />
   </div>
 </template>
 
 <script>
-export default {
-  name: "App"
-};
+export default {};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
